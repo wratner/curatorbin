@@ -163,21 +163,20 @@ buildvariants:
       - test-from-pypi-arm
 
   - name: macos
-    display_name: macOS 10.14
+    display_name: macOS 14
     expansions:
       test_timeout: 15m
     run_on:
-      - macos-1014
-      - macos-1015
+      - macos-14
     tasks:
       - test-from-pypi
 
   - name: macos-arm64
-    display_name: macOS 11 ARM
+    display_name: macOS 14 ARM
     expansions:
       test_timeout: 15m
     run_on:
-      - macos-1100-arm64
+      - macos-14-arm64
     tasks:
       - test-from-pypi
 
