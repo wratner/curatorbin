@@ -9,7 +9,7 @@ because if it were in the top-level dir it would use the local curatorbin.
 import curatorbin
 import subprocess
 
-VERSION_STRING = 'curator version e9d341316abc195b4ea9bc8df6dffbf262c22c5b'
+VERSION_STRING = 'curator version 4ebe0e39c747113bba4c0a41d285e5c422c96d9a'
 
 
 def test_path():

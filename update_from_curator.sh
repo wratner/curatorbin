@@ -9,7 +9,7 @@ set -xeou pipefail
 ## usage: ./update_from_curator.sh MAJOR
 
 # replace (with the latest curator hash) the hash in `testdir/test_basic.py`, `curatorbin/__init__.py` and `evergreen.yml`.
-new_hash=$(git ls-remote git://github.com/mongodb/curator.git | head -n 1 | awk '{print $1}')
+new_hash=$(git ls-remote https://github.com/mongodb/curator.git | head -n 1 | awk '{print $1}')
 old_hash=$(grep "VERSION_STRING =" testdir/test_basic.py | awk '{print $5}')
 old_hash_stripped=${old_hash%\'}
 ./changeover.sh ${old_hash_stripped} ${new_hash}
